@@ -1,94 +1,228 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>PU代抢</title>
-        <meta charset="utf-8">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stylish Centered Heading with Subtext, Left-Aligned Text and Numbered List</title>
     <style>
         body {
             margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0; /* 设置背景颜色 */
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #f0f0f0, #d9d9d9); /* 设置页面的背景色 */
+            background-image: url('https://th.bing.com/th/id/R.beb3f943cbe641907b49ce6ab47ddbef?rik=ipSRbzKRz5iBiA&pid=ImgRaw&r=0'); /* 设置底部背景图案 */
+            background-position: bottom; /* 定位到页面底部 */
+            background-size: cover; /* 使背景图像覆盖整个页面 */
+            background-repeat: no-repeat; /* 防止背景图重复 */
+            background-attachment: fixed; /* 固定背景图，不随页面滚动 */
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            height: 100vh; /* 设置页面高度充满视口 */
+            text-align: center;
+            padding-top: 20px;
         }
 
         h1 {
-            text-align: center; /* 水平居中 */
-            margin-top: 20px; /* 添加一点上边距，防止标题紧贴页面顶部 */
+            font-size: 4em; /* 增大字体大小 */
+            font-weight: bold; /* 加粗字体 */
+            color: #fffaf9; /* 设置文字颜色 */
+            text-transform: uppercase; /* 转为大写 */
+            letter-spacing: 2px; /* 字母间距 */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* 文本阴影 */
+            background-image: linear-gradient(45deg, #ff6347, #ff9900); /* 渐变色背景 */
+            -webkit-background-clip: text; /* 文字填充渐变背景 */
+            background-clip: text;
+            margin: 0; /* 去掉默认的外边距 */
+            animation: fadeIn 1.5s ease-out; /* 动画效果：淡入 */
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .subtext {
+            font-size: 3em; /* 设置子文本的字体大小 */
+            color: transparent; /* 初始设置透明，后续通过渐变效果展示 */
+            background-image: linear-gradient(45deg, #fffaf9, #fffaf9); /* 渐变色背景 */
+            -webkit-background-clip: text; /* 文字填充渐变背景 */
+            background-clip: text;
+            font-weight: bold; /* 加粗字体 */
+            letter-spacing: 1px; /* 字母间距 */
+            margin-top: 20px; /* 与标题保持一定的间隔 */
+            animation: fadeInSubtext 2s ease-out; /* 为子文本添加渐变显现的动画 */
+        }
+
+        @keyframes fadeInSubtext {
+            0% {
+                opacity: 0;
+            }
+            50% {
+                opacity: 0.5;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .left-aligned-text {
+            font-size: 3em; /* 设置新的文本的字体大小 */
+            color: #fffaf9; /* 设置文字颜色 */
+            font-weight: normal; /* 设为普通字体 */
+            text-align: left; /* 左对齐 */
+            width: 80%; /* 宽度设置为80%（可根据需要调整） */
+            margin-top: 20px; /* 设置与子文本的间隔 */
+            padding-left: 20px; /* 设置与左边的间距 */
+            animation: fadeInLeftText 2.5s ease-out; /* 动画效果：渐变显现 */
+        }
+
+        @keyframes fadeInLeftText {
+            0% {
+                opacity: 0;
+                transform: translateX(-50px); /* 从左侧偏移50px */
+            }
+            100% {
+                opacity: 1;
+                transform: translateX(0); /* 动画结束时回到原位 */
+            }
+        }
+
+        /* 为有序列表及其项设置动画效果 */
+        ol {
+            font-size: 1.5em;
+            color: #fffaf9;
+            text-align: left;
+            width: 80%; /* 设置宽度为80% */
+            margin-top: 20px; /* 与上方文本有间距 */
+            padding-left: 20px; /* 左边距 */
+            list-style-position: inside; /* 数字紧贴文本 */
+            animation: fadeInList 3s ease-out; /* 列表整体的渐变显现 */
+        }
+
+        @keyframes fadeInList {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        /* 为列表项添加单独的动画效果 */
+        ol li {
+            animation: fadeInListItem 3s ease-out;
+        }
+
+        @keyframes fadeInListItem {
+            0% {
+                opacity: 0;
+                transform: translateY(20px); /* 从下方20px开始 */
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0); /* 动画结束时回到原位 */
+            }
+        }
+
+        /* 新增文本 */
+        .additional-text {
+            font-size: 1.5em;
+            color: #fffaf9;
+            text-align: left;
+            width: 80%;
+            margin-top: 20px;
+            padding-left: 20px;
+            animation: fadeInAdditionalText 3s ease-out;
+        }
+
+        @keyframes fadeInAdditionalText {
+            0% {
+                opacity: 0;
+                transform: translateY(20px); /* 从下方20px开始 */
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0); /* 动画结束时回到原位 */
+            }
+        }
+
+        /* 新增居中标题样式 */
+        .centered-title {
+            font-size: 4em;
+            font-weight: bold;
+            color: #fffaf9;
+            text-align: center; /* 让文本居中 */
+            margin-top: 30px; /* 给标题和其他元素之间留一些空隙 */
+            margin-bottom: 10px; /* 给居中标题添加下边距 */
+            animation: fadeInCenteredTitle 2s ease-out; /* 设置动画效果 */
+        }
+
+        @keyframes fadeInCenteredTitle {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        /* 新增联系方式样式 */
+        .contact-info {
+            font-size: 2em;
+            color: #fffaf9;
+            text-align: center; /* 让文本居中 */
+            margin-top: 20px; /* 给联系方式留出间隔 */
+            margin-bottom: 100x; /* 给联系方式添加下边距 */
+            animation: fadeInContactInfo 2s ease-out; /* 设置动画效果 */
+        }
+
+        @keyframes fadeInContactInfo {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
         }
     </style>
 </head>
-
 <body>
+    <h1>山科步道乐跑代跑</h1>
+    <div class="subtext">诚信代跑，你值得拥有</div>
+    <div class="left-aligned-text">你问我们的优势？</div>
 
-    <h1>山科PU代抢</h1>
-    <h2>head2</h2>
-    <p>paragraph<br>paragraph2</p>
-    <hr>
-
-    <!-- this is a explanatory note-->
-
-    <b>bold text</b><br>
-    <strong>strong text</strong><br>
-    <em>emphasize text</em><br>
-    <i>italic text</i><br>
-    <p><small>small text</small></p>
-    <p><big>big text</big></p>
-    <p>this text include <sup>superscript</sup> text</p>
-    <p>this text include <sub>subscript</sub> text</p>
-    <p>this text include <ins>insert</ins> text</p>
-    <p>this text include <del>delete</del> text</p>
-    <p>this text inculde <abbr title="abbreviation">abbr</abbr> text</p>
-
-    <pre>
-<b>this is a example demonsrating how "pre" controls spaces and empty lines</b>
-1 1  1   1    1
-1 1  1   1    1
-
-1 1  1   1    1
-
-1 1  1   1    1   </pre>
-
-    <a href="https://www.runoob.com">visited website</a><br>
-    <a href="https://www.runoob.com" target="_blank">_blank can open a link in new window</a>
-
-    <p><bdo dir="rtl">the paragraph text is displayed from right to left</bdo></p>
-
-    <img src="095305-173224038550dd.jpg" alt="this is a image">
-
-    <table border="1">
-        <caption>this is a title</caption>
-        <colgroup>
-            <col span="1" style="background-color: red;">
-            <col span="1" style="background-color: yellow;">
-        </colgroup>
-        <tr>
-            <th>this is a head1</th>
-            <th>this is a head2</th>
-        </tr>
-        <tr>
-            <th>1</th>
-            <th>2</th>
-        </tr>
-        <tr>
-            <th>1</th>
-            <th>2</th>
-        </tr>
-    </table>
-
+    <!-- 有序列表 -->
     <ol>
-        <li>this is the first line</li>
-        <li>this is the second line</li>
+        <li>我们有着专业的脚本，百分百成功率，定能完成您每天的乐跑目标</li>
+        <li>我们有着专业服务团队，全天18小时的在线客服</li>
+        <li>我们有着低廉的收费标准，付款过程全程透明可追踪</li>
+        <li>您可以通过我们的平台随时查看实时跑步数据，确保精准无误</li>
     </ol>
 
-    <ul>
-        <li>this is the first line</li>
-        <li>this is the second line</li>
-    </ul>
+    <div class="left-aligned-text">你问我们的收费标准？</div>
+    <div class="additional-text">我们有着全山科最优惠的价格，只需要1元就可以代跑一公里。<br>
+    而且现在有着极其优惠的团购策略！！！<br>
+    <pre>
+    3人团购有着八折优惠，<br>
+    10人团购有着六折优惠。 </pre>
+    优惠持续到12月1日，机不可失失不再来！！！
+    </div>
 
-    <dl>
-        <dt>this is a list item</dt>
-        <dd>this is a describe</dd>
-    </dl>
-  
+    <div class="left-aligned-text">你问我们的退款政策？</div>
+    <div class="additional-text">如果未能成功完成代跑任务，我们将全额退款，让您无忧。</div>
+
+    <!-- 新增的居中标题文本 -->
+    <div class="centered-title">相信你现在已经心动了！</div>
+
+    <!-- 新增的联系方式 -->
+    <div class="contact-info">
+        以下是我们的联系方式，快加入我们吧！！！<br>
+        qq：1582746393
+    </div>
 </body>
-    
 </html>
